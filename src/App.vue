@@ -27,7 +27,6 @@ body{
 }
 #app {
   width: 500px;
-  height: 500px;
   background-color: orange;
 }
 

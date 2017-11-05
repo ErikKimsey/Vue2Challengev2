@@ -1,9 +1,7 @@
 <template>
   <div class="list-container">
     <ul class="item-list" v-for="item in this.items">
-      <li class="list-item">
-        {{item.title}}
-      </li>
+        <a class="list-item">{{item.title}}</a>
     </ul>
   </div>
 </template>
@@ -34,10 +32,14 @@ export default {
 .list-container {
   background-color: blue;
 }
-.list-item {
+a {
   border:solid 1px white;
   padding:2px;
   color:white;
-  list-style: none;
+  width:400px;
+  &:hover{
+    background-color: white;
+    color:black;
+  }
 }
 </style>
