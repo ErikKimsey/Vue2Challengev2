@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-link :to="{ name: '', params: {} }">
+    <router-link to="/">
     <h1 class="gohome">Go home!</h1>
     </router-link>
     <h2>{{msg}}</h2>

@@ -3,7 +3,7 @@
     <h1>Top JS Hits</h1>
     <ul class="item-list" v-for="(item, index) in this.items">
       <li>
-        <router-link class="list-item" :to="{ name: '', params: {} }">
+        <router-link class="list-item" :to="{ name: 'Item', params: { item.objectID} }">
           {{index + 1}}. {{item.title}}
           <div class="points">
             Points: {{item.points}}
@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  name: 'list',
+  name: 'List',
   data(){
     return {
       items: []

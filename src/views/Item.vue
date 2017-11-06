@@ -14,7 +14,7 @@
 </template>
 <script>
 export default {
-  name: 'item',
+  name: 'Item',
   data(){
     return {
       item: {}
@@ -22,11 +22,11 @@ export default {
   },
   mounted: function(){
     console.log("created");
-    this.fetchList();
+    // this.fetchItem();
   },
   methods: {
-    fetchList(){
-      this.$http.get('http://hn.algolia.com/api/v1/search?query=javascript&hitsPerPage=25').then((response) => {
+    fetchItem(){
+      this.$http.get('http://hn.algolia.com/api/v1/items/id=1').then((response) => {
          this.items = response.data.hits;
          var i;
          for(i=0; i<25; i++){
