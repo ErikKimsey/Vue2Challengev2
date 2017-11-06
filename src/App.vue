@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <h2>something</h2>
-    <h1>{{msg}}</h1>
+    <router-link :to="{ name: '', params: {} }">
+    <h1 class="gohome">Go home!</h1>
+    </router-link>
+    <h2>{{msg}}</h2>
     <List></List>
+    
   </div>
 </template>
 
@@ -29,8 +32,10 @@ body{
   width: 500px;
   background-color: orange;
 }
-
 h1{
   font-size: 2em;
+  &.gohome {
+    font-size: 3em;
+  }
 }
 </style>

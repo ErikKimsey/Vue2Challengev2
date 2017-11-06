@@ -1,24 +1,23 @@
 <template>
-  <div class="list-container">
-    <h1>Top JS Hits</h1>
-    <ul class="item-list" v-for="(item, index) in this.items">
-      <li>
-        <router-link class="list-item" :to="{ name: '', params: {} }">
-          {{index + 1}}. {{item.title}}
-          <div class="points">
-            Points: {{item.points}}
-          </div>
-        </router-link>
+  <div class="item-container">
+    <h1>Individual Post</h1>
+    <div class="post-title"></div>
+    <div class="post-score"></div>
+    <div class="post-url"></div>
+    <ul class="post-comments">
+      <li class="sngl-comment">
+
       </li>
     </ul>
+
   </div>
 </template>
 <script>
 export default {
-  name: 'list',
+  name: 'item',
   data(){
     return {
-      items: []
+      item: {}
     }
   },
   mounted: function(){
@@ -41,14 +40,10 @@ export default {
 </script>
 
 <style lang="scss">
-h1 {
-  background-color: red;
-  color:blue;
-}
 .list-container {
   background-color: blue;
 }
-router-link {
+a {
   background-color: red;
 }
 li {
