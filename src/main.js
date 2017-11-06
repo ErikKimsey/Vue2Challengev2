@@ -11,6 +11,9 @@ Vue.use(VueResource)
 new Vue({
   el: '#app',
   router,
+  data: {
+    sharedState : {}
+  },
   created: function () {
     window.Vue = this
   },
