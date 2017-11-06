@@ -4,8 +4,7 @@
     <h1 class="gohome">Go home!</h1>
     </router-link>
     <h2>{{msg}}</h2>
-    <List></List>
-    
+    <router-view></router-view>
   </div>
 </template>
 
