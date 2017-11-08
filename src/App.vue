@@ -10,11 +10,12 @@
 
 <script>
 import List from './components/List.vue'
+import Item from './components/Item.vue'
 export default {
   name: 'app',
   data(){
     return {
-      msg: "yo yoyoyoy"
+      msg: "App Vue"
     }
   },
   components: {
