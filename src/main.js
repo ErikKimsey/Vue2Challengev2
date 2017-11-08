@@ -6,7 +6,6 @@ import Item from './components/Item.vue'
 import router from './router/router'
 
 Vue.use(VueResource)
-// Vue.use(VueRouter)
 
 new Vue({
   el: '#app',

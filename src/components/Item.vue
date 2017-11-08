@@ -1,6 +1,4 @@
 <template>
-  <!-- <video id="bgvid" playsinline autoplay loop> -->
-    <!-- <source src="./src/assets/rad.mp4" type="video/mp4"> -->
   <div class="item-container">
     <h1>{{ this.item.title }}</h1>
     <div class="post-score">Points: {{this.item.points}}</div>
@@ -18,7 +16,7 @@
       </ul>
     </div>
   </div>
-  <!-- </video> -->
+
 </template>
 <script>
 export default {
