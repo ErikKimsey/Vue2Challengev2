@@ -4,10 +4,13 @@
   <div class="item-container">
     <h1>{{ this.item.title }}</h1>
     <div class="post-score">Points: {{this.item.points}}</div>
-    <div class="post-url">URL: {{ this.item.url }}</div>
+    <a v-bind:href="this.item.url" target="_blank"> <div class="post-url">URL: {{ this.item.url }}</div> </a>
+    Comments:
     <ul class="post-comments" v-for="kid in this.item.children">
       <li class="sngl-comment">
-        {{ kid }}
+        User: {{ kid.author }}
+      </br>
+        Says...  {{ kid.text }}
       </li>
     </ul>
 
