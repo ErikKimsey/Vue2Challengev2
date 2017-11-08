@@ -5,15 +5,18 @@
     <h1>{{ this.item.title }}</h1>
     <div class="post-score">Points: {{this.item.points}}</div>
     <a v-bind:href="this.item.url" target="_blank"> <div class="post-url">URL: {{ this.item.url }}</div> </a>
-    Comments:
-    <ul class="post-comments" v-for="kid in this.item.children">
-      <li class="sngl-comment">
-        User: {{ kid.author }}
-      </br>
-        Says...  {{ kid.text }}
-      </li>
-    </ul>
-
+    <h3>Comments:</h3>
+    <div class="comment-container">
+      <ul class="post-comments" v-for="kid in this.item.children">
+        <li class="sngl-comment">
+          <b>User: {{ kid.author }}</b>
+        </br>
+          <b>Says...  </b>
+        </br>
+          {{ kid.text }}
+        </li>
+      </ul>
+    </div>
   </div>
   <!-- </video> -->
 </template>
@@ -61,28 +64,32 @@ export default {
  background-size: cover;
  transition: 1s opacity;
 }
-.list-container {
-  background-color: blue;
-}
-a {
-  background-color: red;
-}
-li {
-  list-style: none;
-}
-.list-item {
-  border:solid 1px white;
-  padding:2px;
-  color:white;
-  width:400px;
-  &:hover{
-    background-color: white;
-    color:black;
+.item-container {
+  background-color: black;
+  height:600px;
+  width:800px;
+  color:yellow;
+  .comment-container {
+    height: 400px;
+    overflow-y: scroll;
   }
-}
-.points {
-  padding: 2px;
-  color:white;
+  a {
+    color: white;
+  }
+  .post-url {
+    background-color: gray;
+  }
+  li {
+    list-style: none;
+  }
+  .post-score {
+    padding: 2px;
+    color:orange;
+    background-color: black;
+  }
+  h3 {
+    color: Orange;
+  }
 }
 h1 {
   color:white;
